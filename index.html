@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhaval Makvana - Unity Game Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ubuntu+Mono:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div class="pixel-corners"></div>
+    <div class="game-hud">
+        <!-- <div class="hud-score">PROJECTS: <span id="project-count">0</span></div> -->
+        <div class="hud-level">UNITY GAME DEV</div>
+    </div>
+
+    <div class="container">
+        <section class="intro">
+            <h1 class="game-title">DHAVAL MAKVANA<span class="blinking-cursor">_</span></h1>
+            <div class="techie-tagline">
+                <span>🎮 GAMER | 👨‍💻 UNITY DEVELOPER
+                    <span class="blinking-cursor">_</span></span>
+            </div>
+            <p class="game-description">Crafting immersive gaming experiences through innovative design and robust code. Specializing in multiplayer systems, real-time gameplay mechanics, and performance optimization.</p>
+            
+            <div class="dev-stats">
+                <div class="stat">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Games Developed</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">200K+</span>
+                    <span class="stat-label">Downloads</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-grid" id="projects-container">
+            <!-- Projects will be dynamically inserted here -->
+
+        </section>
+
+        <section class="skills-section">
+            <h2 class="section-title">🛠️ DEV SKILLS</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Game Development</h3>
+                    <ul class="skill-list">
+                        <li>Unity Engine</li>
+                        <li>C# Programming</li>
+                        <li>Gameplay Systems</li>
+                        <li>AI Programming</li>
+                        <li>Physics Simulation</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Multiplayer</h3>
+                    <ul class="skill-list">
+                        <li>Photon PUN</li>
+                        <li>Socket.io</li>
+                        <li>Server Architecture</li>
+                        <li>Matchmaking</li>
+                        <li>Sync Systems</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Services</h3>
+                    <ul class="skill-list">
+                        <li>Firebase</li>
+                        <li>PlayFab</li>
+                        <li>AWS</li>
+                        <li>Ad Mediation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- The Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-navigation">
+                    <button class="nav-arrow left-arrow" onclick="navigateGallery(-1)">&#10094;</button>
+                    <div id="modal-media-container">
+                        <!-- Media will be inserted here -->
+                    </div>
+                    <button class="nav-arrow right-arrow" onclick="navigateGallery(1)">&#10095;</button>
+                </div>
+                <div id="modal-description">
+                    <!-- Project details will be inserted here -->
+                </div>
+                <div class="thumbnail-container">
+                    <!-- Thumbnails will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="game-footer">
+        <div class="contact-cta">
+            <h3>READY TO LEVEL UP YOUR PROJECT?</h3>
+            <div class="contact-buttons">
+                <a href="mailto:makvanadhaval002@gmail.com" class="contact-button email">
+                    <i class="fas fa-envelope"></i> Email Me
+                </a>
+                <a href="https://linkedin.com/in/dhavalmakvana/" target="_blank" class="contact-button linkedin">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2025 Dhaval Makvana. All rights reserved.</p>
+            <p>Made with <span class="pixel-heart">❤️</span> in India</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/main.js" type="module"></script>
+    <script src="js/projects.js" type="module"></script>
+</body>
+
+</html>
