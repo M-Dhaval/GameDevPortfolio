@@ -11,18 +11,17 @@ const projects = [
         tech: ["Unity", "C#", "AWS-Powered Servers", "Multiplayer", "Opsive"],
         media: [
             { type: "image", url: "images/Games/Impulse/Thumbnail.png" },
-            { type: "image", url: "images/Games/Ludo_Speed/Thumbnail.webp" },
-            { type: "image", url: "images/Games/Ludo_Cash/Thumbnail.webp" },
-            { type: "video", url: "https://www.youtube.com/embed/PtjGxmFIM5I" }
+            { type: "video", url: "images/Games/Impulse/ImpulseGameplay.mp4" }
+            //{ type: "video", url: "https://www.youtube.com/embed/PtjGxmFIM5I" }
         ],
-        features: [
-            "Realistic weapon mechanics",
-            "Competitive ranking system",
-            "Multiple game modes",
-            "Dedicated server infrastructure"
-        ],
+        // features: [
+        //     "Realistic weapon mechanics",
+        //     "Competitive ranking system",
+        //     "Multiple game modes",
+        //     "Dedicated server infrastructure"
+        // ],
         role: "Lead Developer",
-        challenges: "Optimizing netcode for 60Hz gameplay, implementing realistic ballistics system"
+        //challenges: "Optimizing netcode for 60Hz gameplay, implementing realistic ballistics system"
     },
     {
         id: "champions-arena",
@@ -33,8 +32,11 @@ const projects = [
         thumbnail: "images/Games/ChampionsArena/Thumbnail.png",
         //tags: ["MOBA", "Shooter"],
         tech: ["Unity", "C#", "Google Ads", "Firebase", "PlayFab"],
-        role: "Lead Developer",
-        challenges: ""
+        media: [
+            { type: "image", url: "images/Games/ChampionsArena/Thumbnail.png" },
+            { type: "image", url: "images/Games/ChampionsArena/Thumbnail.png" }
+        ],
+        role: "Lead Developer"
     },
     {
         id: "6ball-cricket",
@@ -45,18 +47,10 @@ const projects = [
         thumbnail: "images/Games/6Ball_Cricket/Thumbnail.png",
         //tags: ["Sports", "Multiplayer"],
         tech: ["Unity", "C#", "WebSocket", "Payment Gateway", "Firebase", "Facebook Integration"],
-        role: "Lead Developer",
-        challenges: ""
-    },
-    {
-        id: "mpl-cricket",
-        title: "MPL Cricket",
-        subtitle: "Madhya Pradesh League: Scindia Cup Cricket",
-        description: "A franchise-based professional T20 cricket league game featuring realistic gameplay mechanics and multiple game modes.",
-        icon: "images/Games/MPL_Cricket/icon.png",
-        thumbnail: "images/Games/MPL_Cricket/Thumbnail.png",
-        //tags: ["Sports", "Multiplayer"],
-        tech: ["Unity", "C#", "Gameplay Mechanics", "League System"],
+        media: [
+            { type: "image", url: "images/Games/6Ball_Cricket/Thumbnail.png" },
+            { type: "image", url: "images/Games/6Ball_Cricket/Thumbnail.png" },
+        ],
         role: "Lead Developer",
         challenges: ""
     },
@@ -69,6 +63,10 @@ const projects = [
         thumbnail: "images/Games/Tank.io/Thumbnail.png",
         //tags: ["Sports", "Multiplayer"],
         tech: ["Unity", "C#", "Photon PUN", "Multiplayer"],
+        media: [
+            { type: "image", url: "images/Games/Tank.io/Thumbnail.png" },
+            { type: "image", url: "images/Games/Tank.io/Thumbnail.png" },
+        ],
         role: "Lead Developer",
         challenges: ""
     },
@@ -81,6 +79,10 @@ const projects = [
         thumbnail: "images/Games/StepOutAndLearn/Thumbnail.png",
         //tags: ["Sports", "Multiplayer"],
         tech: ["Unity", "C#", "Socket.io", "Maps API"],
+        media: [
+            { type: "image", url: "images/Games/StepOutAndLearn/Thumbnail.png" },
+            { type: "image", url: "images/Games/StepOutAndLearn/Thumbnail.png" },
+        ],
         role: "Lead Developer",
         challenges: ""
     },
@@ -93,6 +95,10 @@ const projects = [
         thumbnail: "images/Games/Weapon_Craft/Thumbnail.png",
         //tags: ["Sports", "Multiplayer"],
         tech: ["Unity", "C#", "Firebase", "Google Ads", "Ad Mediation"],
+        media: [
+            { type: "image", url: "images/Games/Weapon_Craft/Thumbnail.png" },
+            { type: "image", url: "images/Games/Weapon_Craft/Thumbnail.png" },
+        ],
         role: "Lead Developer",
         challenges: ""
     },
@@ -105,18 +111,26 @@ const projects = [
         thumbnail: "images/Games/Color_Ring_Puzzle/Thumbnail.webp",
         //tags: ["Sports", "Multiplayer"],
         tech: ["Unity", "C#", "Firebase", "Google Ads", "Photon PUN"],
+        media: [
+            { type: "image", url: "images/Games/Color_Ring_Puzzle/Thumbnail.webp" },
+            { type: "image", url: "images/Games/Color_Ring_Puzzle/Thumbnail.webp" },
+        ],
         role: "Lead Developer",
         challenges: ""
     },
     {
         id: "crokinole",
-        title: "Crokinole Mobile:Carrom Board",
+        title: "Crokinole Mobile : Carrom Board",
         subtitle: "",
         description: "Dive into the captivating world of Crokinole, a classic Canadian multiplayer board game dating back to the 1860s, now beautifully reimagined for your mobile device. Experience the thrill of this circular track-based new carrom game, where precision and strategy reign supreme. Challenge players from every corner of the globe, compete against your friends, or host private matches for an unforgettable tabletop gaming experience.",
         icon: "images/Games/Crokinole_Mobile/icon.webp",
         thumbnail: "images/Games/Crokinole_Mobile/Thumbnail.webp",
         //tags: ["Sports", "Multiplayer"],
         tech: ["Unity", "C#", "Firebase", "Google Ads", "Photon PUN"],
+        media: [
+            { type: "image", url: "images/Games/Crokinole_Mobile/Thumbnail.webp" },
+            { type: "image", url: "images/Games/Crokinole_Mobile/Thumbnail.webp" },
+        ],
         role: "Lead Developer",
         challenges: ""
     },
@@ -129,6 +143,26 @@ const projects = [
         thumbnail: "images/Games/Ludo_Speed/Thumbnail.webp",
         //tags: ["Sports", "Multiplayer"],
         tech: ["Unity", "C#", "Firebase", "Google Ads"],
+        media: [
+            { type: "image", url: "images/Games/Ludo_Speed/Thumbnail.webp" },
+            { type: "image", url: "images/Games/Ludo_Speed/Thumbnail.webp" },
+        ],
+        role: "Lead Developer",
+        challenges: ""
+    },
+    {
+        id: "mpl-cricket",
+        title: "MPL Cricket",
+        subtitle: "Madhya Pradesh League: Scindia Cup Cricket",
+        description: "A franchise-based professional T20 cricket league game featuring realistic gameplay mechanics and multiple game modes.",
+        icon: "images/Games/MPL_Cricket/icon.png",
+        thumbnail: "images/Games/MPL_Cricket/Thumbnail.png",
+        //tags: ["Sports", "Multiplayer"],
+        tech: ["Unity", "C#", "Gameplay Mechanics", "League System"],
+        media: [
+            { type: "image", url: "images/Games/MPL_Cricket/Thumbnail.png" },
+            { type: "image", url: "images/Games/MPL_Cricket/Thumbnail.png" },
+        ],
         role: "Lead Developer",
         challenges: ""
     },
@@ -141,6 +175,10 @@ const projects = [
         thumbnail: "images/Games/Ludo_Cash/Thumbnail.webp",
         //tags: ["Sports", "Multiplayer"],
         tech: ["Unity", "C#", "Firebase", "ironSource", "Socket.io"],
+        media: [
+            { type: "image", url: "images/Games/Ludo_Cash/Thumbnail.webp" },
+            { type: "image", url: "images/Games/Ludo_Cash/Thumbnail.webp" },
+        ],
         role: "Lead Developer",
         challenges: ""
     },
@@ -153,19 +191,29 @@ const projects = [
         thumbnail: "images/Games/Perfect_Duet/Thumbnail.webp",
         //tags: ["Sports", "Multiplayer"],
         tech: ["Unity", "C#", "Firebase", "Google Ads"],
+        media: [
+            { type: "image", url: "images/Games/Perfect_Duet/Thumbnail.webp" },
+            { type: "image", url: "images/Games/Perfect_Duet/Thumbnail.webp" },
+        ],
         role: "Lead Developer",
         challenges: ""
     },
-    // {
-    //     id: "star-square",
-    //     title: "Star Square - Multiplayer Game",
-    //     subtitle: "",
-    //     description: "Play Star Square is with the online real players, This is a new Board Game. This is basically DOT (🔵) CONNECTING SQUARE MAKING GAME. Real time Chat🗨️/ Fantastic Emojis😍/ real time Talk 📞/ Real time multiplayer (more than 1 player, just like ludo, Carrom ) on this board game. THIS IS THE BEST LUDO ALTERNATIVE GAME.",
-    //     icon: "images/Games/Star_Square/icon.webp",
-    //     thumbnail: "images/Games/Star_Square/Thumbnail.webp",
-    //     //tags: ["Sports", "Multiplayer"],
-    //     tech: ["Unity", "C#", "Firebase", "Google Ads", "Photon PUN", "Real-Time Chat", "Multiplayer"]
-    // }
+    {
+        id: "star-square",
+        title: "Star Square - Multiplayer Game",
+        subtitle: "",
+        description: "Play Star Square is with the online real players, This is a new Board Game. This is basically DOT (🔵) CONNECTING SQUARE MAKING GAME. Real time Chat🗨️/ Fantastic Emojis😍/ real time Talk 📞/ Real time multiplayer (more than 1 player, just like ludo, Carrom ) on this board game. THIS IS THE BEST LUDO ALTERNATIVE GAME.",
+        icon: "images/Games/Star_Square/icon.webp",
+        thumbnail: "images/Games/Star_Square/Thumbnail.jpg",
+        //tags: ["Sports", "Multiplayer"],
+        tech: ["Unity", "C#", "Firebase", "Google Ads", "Photon PUN", "Real-Time Chat", "Multiplayer"],
+        media: [
+            { type: "image", url: "images/Games/Star_Square/Thumbnail.jpg" },
+            { type: "video", url: "https://www.youtube.com/embed/PtjGxmFIM5I" }
+        ],
+        role: "Lead Developer",
+        challenges: ""
+    }
     // Continue with all other projects...
 ];
 
