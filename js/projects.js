@@ -59,7 +59,7 @@ const projects = [
         title: "Tank.io - Demo",
         subtitle: "Multiplayer tank battle game",
         description: "Features real-time combat and strategic gameplay with multiplayer functionality.",
-        icon: "images/Games/Tank.io/icon.png",
+        icon: "images/Games/Tank.io/icon.jpg",
         thumbnail: "images/Games/Tank.io/Thumbnail.png",
         //tags: ["Sports", "Multiplayer"],
         tech: ["Unity", "C#", "Photon PUN", "Multiplayer"],
@@ -185,7 +185,7 @@ const projects = [
     {
         id: "perfect-duet",
         title: "Perfect Duet: Kitty Music Beat",
-        subtitle: "",
+        subtitle: "Catch the Beat with Every Paw-some Note!",
         description: "😺 Get ready to purr along with the cutest musical adventure! 😻 <br> Join adorable cats as they sing and dance their way through exciting musical levels! 🐾 Tap to the rhythm 🎵 and help the kitties hit every note 🎶 in this pawsome, relaxing, and fun game. 🎸🎤",
         icon: "images/Games/Perfect_Duet/icon.webp",
         thumbnail: "images/Games/Perfect_Duet/Thumbnail.webp",
@@ -201,7 +201,7 @@ const projects = [
     {
         id: "star-square",
         title: "Star Square - Multiplayer Game",
-        subtitle: "",
+        subtitle: "Connect the Dots, Chat, and Conquer the Board!",
         description: "Play Star Square is with the online real players, This is a new Board Game. This is basically DOT (🔵) CONNECTING SQUARE MAKING GAME. Real time Chat🗨️/ Fantastic Emojis😍/ real time Talk 📞/ Real time multiplayer (more than 1 player, just like ludo, Carrom ) on this board game. THIS IS THE BEST LUDO ALTERNATIVE GAME.",
         icon: "images/Games/Star_Square/icon.webp",
         thumbnail: "images/Games/Star_Square/Thumbnail.jpg",
@@ -209,7 +209,23 @@ const projects = [
         tech: ["Unity", "C#", "Firebase", "Google Ads", "Photon PUN", "Real-Time Chat", "Multiplayer"],
         media: [
             { type: "image", url: "images/Games/Star_Square/Thumbnail.jpg" },
-            { type: "video", url: "https://www.youtube.com/embed/PtjGxmFIM5I" }
+            { type: "youtube", url: "https://www.youtube.com/embed/PtjGxmFIM5I" }
+        ],
+        role: "Lead Developer",
+        challenges: ""
+    },
+    {
+        id: "melody-rush-music",
+        title: "Melody Rush Music Game",
+        subtitle: "Chase the Path. Beat the Score. Feel the Music.",
+        description: "Melody Rush is a free game that relaxes your mind using the most peaceful sound. Just go with the flow. The ultimate fun of this game is that you can't predict the path location. The path appears on random spots, you have to move the ball to the corresponding location. Melody Rush is a kind of endless game where you continue to move forward, the path will keep appearing along the way. If you skip any path, your game is over. Make the highest score and try to beat your own highest score.",
+        icon: "images/Games/Melody_Rush_Music/icon.webp",
+        thumbnail: "images/Games/Melody_Rush_Music/Thumbnail.webp",
+        //tags: ["Sports", "Multiplayer"],
+        tech: ["Unity", "C#", "Firebase", "Google Play Games", "Google Ads"],
+        media: [
+            { type: "image", url: "images/Games/Melody_Rush_Music/Thumbnail.webp" },
+            { type: "image", url: "images/Games/Melody_Rush_Music/Thumbnail.webp" },
         ],
         role: "Lead Developer",
         challenges: ""
@@ -240,7 +256,13 @@ function generateProjectCards() {
             <div class="project-content">
                 <h3 class="project-title">${project.title}</h3>
                 <p class="project-subtitle">${project.subtitle}</p>
-                <p class="project-description">${project.description}</p>
+                <p class="project-description">
+                ${
+                    project.description.split(' ').length > 25
+                      ? project.description.split(' ').slice(0, 25).join(' ') + '...'
+                      : project.description
+                  }
+                </p>
                 <button class="view-details" data-project-index="${index}">
     VIEW DETAILS <i class="fas fa-chevron-right"></i>
 </button>
@@ -306,14 +328,38 @@ function openProjectModal(projectIndex) {
 
             const thumbnail = document.createElement('img');
             thumbnail.className = 'thumbnail' + (index === 0 ? ' active' : '');
-            thumbnail.src = media.type === 'image' ? media.url : getYouTubeThumbnail(media.url);
+            //thumbnail.src = media.type === 'image' ? media.url : getYouTubeThumbnail(media.url);
             thumbnail.alt = `Thumbnail ${index + 1}`;
             thumbnail.dataset.mediaIndex = index;
+
+            if (media.type === 'image') {
+                thumbnail.src = media.url;
+            } else if (media.type === 'youtube') {
+                thumbnail.src = getYouTubeThumbnail(media.url);
+            } else if (media.type === 'video') {
+                // Create video element to load and grab a frame
+                const video = document.createElement('video');
+                video.src = media.url;
+                video.crossOrigin = 'anonymous';
+                video.muted = true;
+                video.currentTime = 2;
+            
+                video.addEventListener('loadeddata', () => {
+                    const canvas = document.createElement('canvas');
+                    canvas.width = video.videoWidth;
+                    canvas.height = video.videoHeight;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+            
+                    const imgURL = canvas.toDataURL('image/png');
+                    thumbnail.src = imgURL;
+                }, { once: true });
+            }
 
             // Add media type indicator
             const mediaTypeBadge = document.createElement('div');
             mediaTypeBadge.className = 'media-type-badge';
-            mediaTypeBadge.textContent = media.type === 'video' ? '▶' : '🖼';
+            mediaTypeBadge.textContent = media.type === 'image' ? '🖼' : '▶';
 
             thumbnailWrapper.appendChild(thumbnail);
             thumbnailWrapper.appendChild(mediaTypeBadge);
@@ -376,6 +422,7 @@ function getYouTubeThumbnail(url) {
     return `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`; // mqdefault gives consistent size
 }
 
+
 function updateMediaDisplay(media) {
     const mediaContainer = document.getElementById('modal-media-container');
 
@@ -393,7 +440,7 @@ function updateMediaDisplay(media) {
                 <img src="${media.url}" alt="Project Screenshot" loading="lazy">
             </div>
         `;
-    } else if (media.type === 'video') {
+    } else if (media.type === 'video' || media.type === 'youtube') {
         mediaContainer.innerHTML = `
             <div class="video-container">
                 <iframe id="modal-video" src="${media.url}?autoplay=1&mute=1" frameborder="0" 
@@ -403,20 +450,20 @@ function updateMediaDisplay(media) {
         `;
 
         currentVideoElement = document.getElementById('modal-video');
-        
+
         // Add event listeners to track video state
         currentVideoElement.addEventListener('play', () => {
             isVideoPlaying = true;
         });
-        
+
         currentVideoElement.addEventListener('pause', () => {
             isVideoPlaying = false;
         });
-        
+
         currentVideoElement.addEventListener('ended', () => {
             isVideoPlaying = false;
         });
-        
+
     }
 }
 
