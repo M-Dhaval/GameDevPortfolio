@@ -229,6 +229,103 @@ const projects = [
         ],
         role: "Lead Developer",
         challenges: ""
+    },
+    {
+        id: "burger-delivery-simulator",
+        title: "Burger Delivery Simulator",
+        subtitle: "Fast-Paced Burger Delivery Adventure!",
+        description: "In Burger Delivery Simulator, you step into the shoes of a burger delivery person racing against the clock to deliver delicious burgers to hungry customers. Navigate through busy streets, avoid obstacles, and make quick decisions to ensure your deliveries are on time. Upgrade your vehicle, unlock new routes, and master the art of fast food delivery in this exciting and fast-paced simulator game!",
+        icon: "images/Games/Burger_Delivery_Simulator/icon.webp",
+        thumbnail: "images/Games/Burger_Delivery_Simulator/Thumbnail.webp",
+        //tags: ["Sports", "Multiplayer"],
+        tech: ["Unity", "C#", "Desktop and Console", "Gameplay Mechanics"],
+        media: [
+            { type: "image", url: "images/Games/Burger_Delivery_Simulator/Thumbnail.webp" },
+            { type: "image", url: "images/Games/Burger_Delivery_Simulator/Thumbnail.webp" },
+        ],
+        role: "Lead Developer",
+        challenges: ""
+    },
+    {
+        id: "arrow-duel",
+        title: "Arrow Duel",
+        subtitle: "Aim, Power Up, and Outsmart Your Opponent in Epic Arrow Duels!",
+        description: "Archery is the thrilling skill of shooting arrows with precision using a bow. In this exciting duel game, your goal is to hit your opponent’s target before they hit yours. The player who reaches 10 hits/score first wins the duel. <br><br> Score 5 points to advance to the next level and face greater challenges. <br><br> During the game, special power-ups may appear to give you an advantage: <br> Arrow: Shoot double arrows at once, hitting your opponent twice! <br> Bomb: Your arrow explodes on impact, dealing extra damage. <br> Freeze: Temporarily freeze your opponent for a few seconds, giving you an edge. <br><br> Additionally, wind may appear randomly, blowing left or right for a few seconds and affecting the arrow’s trajectory. <br><br> Aim carefully, use your powers wisely, and master the wind to become the ultimate archery champion!",
+        icon: "images/Games/Arrow_Duel/icon.png",
+        thumbnail: "images/Games/Arrow_Duel/Thumbnail.jpg",
+        //tags: ["Sports", "Multiplayer"],
+        tech: ["Unity", "C#", "WebGL", "Photon Fusion-2", "WebSocket"],
+        media: [
+            { type: "image", url: "images/Games/Arrow_Duel/Thumbnail.jpg" },
+            { type: "video", url: "images/Games/Arrow_Duel/Gameplay_video.mp4" },
+        ],
+        role: "Lead Developer, Designer, Animator",
+        challenges: ""
+    },
+    {
+        id: "traffic-dash",
+        title: "Traffic Dash",
+        subtitle: "Speed Through Traffic and Avoid Collisions in This Thrilling Dash!",
+        description: "",
+        icon: "images/Games/Traffic_Dash/icon.png",
+        thumbnail: "images/Games/Traffic_Dash/Thumbnail.jpg",
+        //tags: ["Sports", "Multiplayer"],
+        tech: ["Unity", "C#", "WebGL", "Photon Fusion-2", "WebSocket"],
+        media: [
+            { type: "image", url: "images/Games/Traffic_Dash/Thumbnail.jpg" },
+            { type: "video", url: "images/Games/Traffic_Dash/Gameplay_video.mp4" },
+        ],
+        role: "Lead Developer, Designer",
+        challenges: ""
+    },
+    {
+        id: "highway-rivals",
+        title: "Highway Rivals",
+        subtitle: "Speed Through Traffic and Avoid Collisions in This Thrilling Dash!",
+        description: "",
+        icon: "images/Games/Highway_Rivals/icon.png",
+        thumbnail: "images/Games/Highway_Rivals/Thumbnail.jpg",
+        //tags: ["Sports", "Multiplayer"],
+        tech: ["Unity", "C#", "WebGL", "Photon Fusion-2", "WebSocket"],
+        media: [
+            { type: "image", url: "images/Games/Highway_Rivals/Thumbnail.jpg" },
+            { type: "video", url: "images/Games/Highway_Rivals/Gameplay_video.mp4" },
+        ],
+        role: "Lead Developer, Designer",
+        challenges: ""
+    },
+    {
+        id: "tag-fall",
+        title: "Tag Fall",
+        subtitle: "Catch, Run, Dodge – Don’t Get Tagged!",
+        description: "Dive into the ultimate autumn chase! In Tag Fall, sprint, dodge, and outsmart your opponents across vibrant fall landscapes. Grab exciting power-ups, navigate seasonal obstacles, and stay on your toes—every round is a race against the clock. Will you be the fastest, the cleverest, or the luckiest? But beware: when the timer runs out, the tagger loses! <br><br> Simply walk into another character to tag them, you will see a white arrow above the player who is on!",
+        icon: "images/Games/Tag_Fall/icon.png",
+        thumbnail: "images/Games/Tag_Fall/Thumbnail.jpg",
+        //tags: ["Sports", "Multiplayer"],
+        tech: ["Unity", "C#", "WebGL", "Photon Fusion-2", "WebSocket"],
+        media: [
+            { type: "image", url: "images/Games/Tag_Fall/Thumbnail.jpg" },
+            { type: "video", url: "images/Games/Tag_Fall/Gameplay_video.mp4" },
+        ],
+        role: "Lead Developer",
+        challenges: ""
+    },
+    {
+        id: "water-ring-toss",
+        title: "Water Ring Toss",
+        subtitle: "",
+        description: "A cozy simulator of the Water Ring Toss toy from everyone's childhood. Relax while enjoying this frustrating game. Get all the rings on the cone and win! <br><br> Control the pressure of water, just like the real thing, and get all of the rings on the cone. Water physics are simulated to make it feel authentic. <br><br> Local two player co-op also available. Each player gets a toy and both race to win! <br><br> List of features: <br> Fluid physics <br> Two player Ai and co-op <br> Cozy atmosphere and calm music",
+        icon: "images/Games/Water_Ring_Toss/icon.png",
+        thumbnail: "images/Games/Water_Ring_Toss/Thumbnail.png",
+        //tags: ["Sports", "Multiplayer"],
+        tech: ["Unity", "C#", "WebGL", "Photon Fusion-2", "WebSocket"],
+        media: [
+            { type: "image", url: "images/Games/Water_Ring_Toss/Thumbnail.png" },
+            { type: "image", url: "images/Games/Water_Ring_Toss/Thumbnail.png" },
+            // { type: "video", url: "images/Games/Water_Ring_Toss/Gameplay_video.mp4" },
+        ],
+        role: "Lead Developer",
+        challenges: ""
     }
     // Continue with all other projects...
 ];
