@@ -11,8 +11,8 @@ const projects = [
         tech: ["Unity", "C#", "AWS-Powered Servers", "Multiplayer", "Opsive"],
         media: [
             { type: "image", url: "images/Games/Impulse/Thumbnail.png" },
-            { type: "video", url: "images/Games/Impulse/ImpulseGameplay.mp4" }
-            //{ type: "video", url: "https://www.youtube.com/embed/PtjGxmFIM5I" }
+            // { type: "video", url: "images/Games/Impulse/ImpulseGameplay.mp4" }
+            { type: "video", url: "https://www.youtube.com/watch?v=Ea8v3A86cv0" }
         ],
         // features: [
         //     "Realistic weapon mechanics",
@@ -235,13 +235,13 @@ const projects = [
         title: "Burger Delivery Simulator",
         subtitle: "Fast-Paced Burger Delivery Adventure!",
         description: "In Burger Delivery Simulator, you step into the shoes of a burger delivery person racing against the clock to deliver delicious burgers to hungry customers. Navigate through busy streets, avoid obstacles, and make quick decisions to ensure your deliveries are on time. Upgrade your vehicle, unlock new routes, and master the art of fast food delivery in this exciting and fast-paced simulator game!",
-        icon: "images/Games/Burger_Delivery_Simulator/icon.webp",
-        thumbnail: "images/Games/Burger_Delivery_Simulator/Thumbnail.webp",
+        icon: "images/Games/Burger_Delivery_Simulator/icon.png",
+        thumbnail: "images/Games/Burger_Delivery_Simulator/Thumbnail.png",
         //tags: ["Sports", "Multiplayer"],
         tech: ["Unity", "C#", "Desktop and Console", "Gameplay Mechanics"],
         media: [
-            { type: "image", url: "images/Games/Burger_Delivery_Simulator/Thumbnail.webp" },
-            { type: "image", url: "images/Games/Burger_Delivery_Simulator/Thumbnail.webp" },
+            { type: "image", url: "images/Games/Burger_Delivery_Simulator/Thumbnail.png" },
+            { type: "image", url: "images/Games/Burger_Delivery_Simulator/Thumbnail.png" },
         ],
         role: "Lead Developer",
         challenges: ""
@@ -266,7 +266,7 @@ const projects = [
         id: "traffic-dash",
         title: "Traffic Dash",
         subtitle: "Speed Through Traffic and Avoid Collisions in This Thrilling Dash!",
-        description: "",
+        description: "Traffic Dash is a first-person motorcycle driving game that puts you directly on the bike for a fast and immersive ride. Races are goal-based, requiring players to complete the race before the timer ends by reaching the finish line. The game focuses on smooth highway racing, realistic bike sounds, and detailed visuals. Players speed through traffic, overtake vehicles closely, and maintain control at high speeds. Traffic Dash supports single-player and multiplayer gameplay, allowing players to compete while mastering timing, speed, and precision on busy roads.",
         icon: "images/Games/Traffic_Dash/icon.png",
         thumbnail: "images/Games/Traffic_Dash/Thumbnail.jpg",
         //tags: ["Sports", "Multiplayer"],
@@ -278,22 +278,22 @@ const projects = [
         role: "Lead Developer, Designer",
         challenges: ""
     },
-    {
-        id: "highway-rivals",
-        title: "Highway Rivals",
-        subtitle: "Speed Through Traffic and Avoid Collisions in This Thrilling Dash!",
-        description: "",
-        icon: "images/Games/Highway_Rivals/icon.png",
-        thumbnail: "images/Games/Highway_Rivals/Thumbnail.jpg",
-        //tags: ["Sports", "Multiplayer"],
-        tech: ["Unity", "C#", "WebGL", "Photon Fusion-2", "WebSocket"],
-        media: [
-            { type: "image", url: "images/Games/Highway_Rivals/Thumbnail.jpg" },
-            { type: "video", url: "images/Games/Highway_Rivals/Gameplay_video.mp4" },
-        ],
-        role: "Lead Developer, Designer",
-        challenges: ""
-    },
+    // {
+    //     id: "highway-rivals",
+    //     title: "Highway Rivals",
+    //     subtitle: "Speed Through Traffic and Avoid Collisions in This Thrilling Dash!",
+    //     description: "Highway Rivals is a fast-paced car racing game that puts you behind the wheel for intense highway action. Races are goal-based, requiring players to reach the finish line before the timer ends. The game emphasizes smooth driving, high-speed overtakes, and detailed environments as you weave through traffic on busy highways. Precision, timing, and control are key to winning each race. Highway Rivals features both single-player and multiplayer modes, allowing players to race solo or compete against others in thrilling highway battles.",
+    //     icon: "images/Games/Highway_Rivals/icon.png",
+    //     thumbnail: "images/Games/Highway_Rivals/Thumbnail.jpg",
+    //     //tags: ["Sports", "Multiplayer"],
+    //     tech: ["Unity", "C#", "WebGL", "Photon Fusion-2", "WebSocket"],
+    //     media: [
+    //         { type: "image", url: "images/Games/Highway_Rivals/Thumbnail.jpg" },
+    //         { type: "video", url: "images/Games/Highway_Rivals/Gameplay_video.mp4" },
+    //     ],
+    //     role: "Lead Developer, Designer",
+    //     challenges: ""
+    // },
     {
         id: "tag-fall",
         title: "Tag Fall",
@@ -360,11 +360,11 @@ function generateProjectCards() {
                       : project.description
                   }
                 </p>
-                <button class="view-details" data-project-index="${index}">
-    VIEW DETAILS <i class="fas fa-chevron-right"></i>
-</button>
-            </div>
-        `;
+                </div>
+                `;
+//                 <button class="view-details" data-project-index="${index}">
+//     VIEW DETAILS <i class="fas fa-chevron-right"></i>
+// </button>
 
         container.appendChild(card);
     });
